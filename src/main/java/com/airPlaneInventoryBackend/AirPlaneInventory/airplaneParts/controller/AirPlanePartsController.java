@@ -22,7 +22,7 @@ public class AirPlanePartsController {
         this.airPlanePartsServiceLayer = airPlanePartsServiceLayer;
     }
 
-    @GetMapping("Test")
+    @GetMapping("/test")
     public ResponseEntity<String> getTest(){
         return new ResponseEntity<>("Hello, The APPI is up : "+new Date(System.currentTimeMillis()),HttpStatus.OK);
     }
