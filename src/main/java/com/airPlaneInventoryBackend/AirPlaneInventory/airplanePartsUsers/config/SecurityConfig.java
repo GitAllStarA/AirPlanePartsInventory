@@ -27,7 +27,8 @@ public class SecurityConfig {
                 .cors((cors)->cors.disable())
                 .csrf((csrf)->csrf.disable())
                 .authorizeHttpRequests(
-                        (authz) -> authz.requestMatchers("/app/login/**","/app/parts/test")
+                        (authz) -> authz
+                                .requestMatchers("/app/login/**","/app/parts/test")
                                 .permitAll()
                                 .anyRequest()
                                 .authenticated()
