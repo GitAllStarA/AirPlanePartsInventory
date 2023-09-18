@@ -8,6 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Date;
 import java.util.List;
 
 @RestController
@@ -19,6 +20,11 @@ public class AirPlanePartsController {
     @Autowired
     public AirPlanePartsController(AirPlanePartsServiceLayer airPlanePartsServiceLayer) {
         this.airPlanePartsServiceLayer = airPlanePartsServiceLayer;
+    }
+
+    @GetMapping("Test")
+    public ResponseEntity<String> getTest(){
+        return new ResponseEntity<>("Hello, The APPI is up : "+new Date(System.currentTimeMillis()),HttpStatus.OK);
     }
 
     @GetMapping("/all")
