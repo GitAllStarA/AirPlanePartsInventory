@@ -1,15 +1,13 @@
 package com.airPlaneInventoryBackend.AirPlaneInventory.airplanePartsUsers.controller;
 
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
 @Builder
+@ToString
 public class RegisterReq {
     private String firstname;
     private String lastname;
