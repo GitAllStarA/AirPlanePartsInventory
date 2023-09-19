@@ -1,6 +1,4 @@
-Certainly! Here's a `README.md` template for your Spring Boot application:
 
----
 
 # Airplane Parts Inventory Management System
 
@@ -22,13 +20,13 @@ This repository contains a Spring Boot application designed to manage an invento
 
 1. **Add a Part**: `POST /api/parts/add`
 2. **Update a Part**: `PUT /api/parts/update/{id}`
-3. more to be implemented
+3. **more to be implemented**
 
 ### User Management API
 
 1. **Register a User**: `POST /api/users/register`
 2. **Update User Details**: `PUT /api/users/update/{id}`
-3. more to be implemented
+3. **more to be implemented**
 
 ## Setup and Installation
 
