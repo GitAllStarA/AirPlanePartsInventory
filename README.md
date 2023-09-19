@@ -1,5 +1,3 @@
-
-
 # Airplane Parts Inventory Management System
 
 ## Description
