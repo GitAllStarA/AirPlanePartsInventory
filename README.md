@@ -14,6 +14,12 @@ This repository contains a Spring Boot application designed to manage an invento
 
 ## Endpoints
 
+to test the application go to the link 
+
+https://airplane.azurewebsites.net/app/parts/test
+
+register and authenticate both using postman 
+
 ### Airplane Parts API
 
 1. **Add a Part**: `POST /api/parts/add`
