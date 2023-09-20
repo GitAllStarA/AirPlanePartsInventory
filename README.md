@@ -12,13 +12,60 @@ This repository contains a Spring Boot application designed to manage an invento
 - **Azure GitHub Actions**: Continuous Integration and Deployment to a web application environment.
 - **Database**: Utilizes MySQL for data storage and retrieval.
 
+Certainly! Here's a description you can add to your GitHub readme file:
+
+---
+
+## Authentication Process in Our Spring Boot Application
+
+Our Spring Boot application uses JWT (JSON Web Token) for authentication. Below are the steps to authenticate and access the secured endpoints:
+
+### 1. **User Registration**
+
+Before accessing the application, you need to register. To do so, provide the following details:
+
+
+Send request to : https://airplane.azurewebsites.net/app/login/register
+
+under body as json with below keys and your values 
+
+- First Name
+- Last Name
+- Email
+- Password
+- Role 
+
+
+### 2. **Acquiring Initial JWT Token**
+
+Upon successful registration, you'll receive a JWT token. This token will be used for the next step of authentication.
+
+### 3. **Authenticate with the Initial Token**
+
+To authenticate:
+
+
+
+- Copy the JWT token you received from the registration.
+- Send a POST request to the authentication endpoint. In postman go to the Authorization tab and select type then select Bearer Tokn paste the token.
+
+Send request to https://airplane.azurewebsites.net/app/login/authenticate 
+
+- In the request body, provide:
+  - Email ID
+  - Password
+
+Upon successful authentication, you'll receive a new JWT token.
+
+### 4. **Accessing Other Endpoints**
+
+Use the new JWT token to make requests to other secured endpoints. copy this newly reviewed token (similar to step 3) for authentication.
+
+**Note**: Ensure to keep your tokens secure and do not share them publicly.
+
+
 ## Endpoints
 
-to test the application go to the link 
-
-https://airplane.azurewebsites.net/app/parts/test
-
-register and authenticate both using postman 
 
 ### Airplane Parts API
 
