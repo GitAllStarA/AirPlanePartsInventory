@@ -46,5 +46,9 @@ public class AirPlanePartsServiceLayer {
         airplanePartsRepo.deleteById(id);
     }
 
+    public Optional<AirPlaneParts> findById(Long id){
+        return airplanePartsRepo.findByPartId(id);
+    }
+
 
 }

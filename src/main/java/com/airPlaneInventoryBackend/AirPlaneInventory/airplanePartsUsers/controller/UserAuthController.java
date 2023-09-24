@@ -1,15 +1,15 @@
 package com.airPlaneInventoryBackend.AirPlaneInventory.airplanePartsUsers.controller;
 
+import com.airPlaneInventoryBackend.AirPlaneInventory.airplanePartsUsers.roles.Role;
+import com.airPlaneInventoryBackend.AirPlaneInventory.airplanePartsUsers.roles.RoleUtils;
 import com.airPlaneInventoryBackend.AirPlaneInventory.airplanePartsUsers.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
+@CrossOrigin({"http://localhost:4200"})
 @RestController
-@RequestMapping("/app/login")
+@RequestMapping("/app/login/")
 public class UserAuthController {
     private final UserService userService;
 
@@ -20,7 +20,13 @@ public class UserAuthController {
 
 
     @PostMapping("/register")
-    public ResponseEntity<AuthenticationResponse> register(@RequestBody RegisterReq registerReq) {
+    public ResponseEntity<?> register(@RequestBody RegisterReq registerReq) {
+        Role role;
+        try {
+            role = Role.valueOf(registerReq.getRole().toUpperCase());
+        }catch (IllegalArgumentException e) {
+            return ResponseEntity.badRequest().body("Invalid role: " + registerReq.getRole());
+        }
         return ResponseEntity.ok(userService.register(registerReq));
     }
 
