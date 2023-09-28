@@ -2,8 +2,6 @@ package com.airPlaneInventoryBackend.AirPlaneInventory.airplaneParts.controller;
 
 import com.airPlaneInventoryBackend.AirPlaneInventory.airplaneParts.model.AirPlaneParts;
 import com.airPlaneInventoryBackend.AirPlaneInventory.airplaneParts.service.AirPlanePartsServiceLayer;
-import com.airPlaneInventoryBackend.AirPlaneInventory.airplanePartsUsers.controller.AuthenticationRequest;
-import com.airPlaneInventoryBackend.AirPlaneInventory.airplanePartsUsers.controller.RegisterReq;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -18,7 +16,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@CrossOrigin({"http://localhost:4200"})
+//@CrossOrigin({"http://localhost:4200"})
 @RestController
 @RequestMapping("/app/parts")
 public class AirPlanePartsController {

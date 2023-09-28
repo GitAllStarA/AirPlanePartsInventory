@@ -1,4 +1,4 @@
-package com.airPlaneInventoryBackend.AirPlaneInventory.airplaneParts;
+package com.airPlaneInventoryBackend.AirPlaneInventory.airplaneParts.exception;
 
 public class PartNotFoundException  extends RuntimeException{
     public PartNotFoundException(String message){

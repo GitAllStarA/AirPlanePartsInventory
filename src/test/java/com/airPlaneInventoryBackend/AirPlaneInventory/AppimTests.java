@@ -1,6 +1,5 @@
 package com.airPlaneInventoryBackend.AirPlaneInventory;
 
-import com.airPlaneInventoryBackend.AirPlaneInventory.airplaneParts.PartNotFoundException;
 import com.airPlaneInventoryBackend.AirPlaneInventory.airplaneParts.model.AirPlaneParts;
 import com.airPlaneInventoryBackend.AirPlaneInventory.airplaneParts.repo.AirplanePartsRepo;
 import com.airPlaneInventoryBackend.AirPlaneInventory.airplaneParts.service.AirPlanePartsServiceLayer;
@@ -8,12 +7,9 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
-import org.mockito.Mockito;
 import org.mockito.junit.MockitoJUnitRunner;
 
 
-
-import java.util.List;
 import java.util.Optional;
 
 import static org.junit.Assert.*;
