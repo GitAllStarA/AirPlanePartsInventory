@@ -113,4 +113,8 @@ public class UserService {
                 .token(jwToken)
                 .build();
     }
+
+    public boolean hasEmailRegistered(String email) {
+        return userRepo.existsByEmail(email);
+    }
 }

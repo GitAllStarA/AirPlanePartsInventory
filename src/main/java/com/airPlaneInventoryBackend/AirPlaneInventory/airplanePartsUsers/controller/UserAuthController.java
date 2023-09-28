@@ -7,6 +7,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.HashMap;
+import java.util.Map;
+
 @CrossOrigin({"http://localhost:4200"})
 @RestController
 @RequestMapping("/app/login/")
@@ -27,6 +30,12 @@ public class UserAuthController {
         }catch (IllegalArgumentException e) {
             return ResponseEntity.badRequest().body("Invalid role: " + registerReq.getRole());
         }
+        if (userService.hasEmailRegistered(registerReq.getEmail())){
+            Map<String,String> errorMap = new HashMap<>();
+            errorMap.put("error",registerReq.getEmail()+" email registered has already, please use different email");
+            return ResponseEntity.badRequest().body(errorMap);
+        }
+
         return ResponseEntity.ok(userService.register(registerReq));
     }
 

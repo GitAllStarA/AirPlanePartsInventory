@@ -7,10 +7,10 @@ import org.springframework.http.HttpMethod;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
-@Configuration
+//@Configuration
 public class WebConfig implements WebMvcConfigurer {
 
-    @Bean
+   // @Bean
     public WebMvcConfigurer configurer() {
         return new WebMvcConfigurer() {
             @Override

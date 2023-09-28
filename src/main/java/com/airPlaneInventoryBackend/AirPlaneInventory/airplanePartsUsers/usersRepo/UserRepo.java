@@ -10,4 +10,6 @@ import java.util.Optional;
 @Repository
 public interface UserRepo extends JpaRepository<AirplanePartsInventoryUser,Long>, CrudRepository<AirplanePartsInventoryUser,Long> {
     Optional<AirplanePartsInventoryUser> findByEmail(String email);
+
+    boolean existsByEmail(String email);
 }
